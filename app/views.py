@@ -5,9 +5,7 @@ from django.db.models import ObjectDoesNotExist
 
 
 def index(request):
-    if request.user.is_anonymous:
-        return redirect("/login.html")
-    return html(request, "index")
+    return render(request,'signup.html')
 
 
 def html(request, filename):
